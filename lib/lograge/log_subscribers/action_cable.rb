@@ -11,9 +11,8 @@ module Lograge
 
       def initial_data(payload)
         {
-          method: {},
-          path: {},
-          format: {},
+          method: 'WEBSOCKET',
+          format: 'json',
           params: payload[:data],
           controller: payload[:channel_class] || payload[:connection_class],
           action: payload[:action]
